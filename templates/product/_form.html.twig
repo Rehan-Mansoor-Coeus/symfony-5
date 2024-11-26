@@ -1,0 +1,21 @@
+<div class="form">
+    <div>
+        {{ form_row(form.name) }}
+    </div>
+    <div>
+        {{ form_row(form.price) }}
+    </div>
+    <div>
+        {{ form_row(form.description) }}
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#price-input').on('input', function () {
+            console.log($(this).val());
+            $('#description-input').val(`Price is: ${$(this).val()}`);
+        });
+    });
+</script>
